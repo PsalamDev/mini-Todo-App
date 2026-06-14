@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Todo App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="todo-card">
+        <header class="hero">
+          <div>
+            <p class="eyebrow">Group Project</p>
+            <h1>Mini Todo App</h1>
+            <p class="subtitle">Plan your day, keep tasks in order, and stay focused.</p>
+          </div>
+          <div class="badge">Live</div>
+        </header>
+
+        <form id="todo-form" class="todo-form">
+          <label for="todo-input" class="sr-only">Add a task</label>
+          <input id="todo-input" name="todo" type="text" placeholder="What needs to be done?" autocomplete="off" required />
+          <button type="submit">Add Task</button>
+        </form>
+
+        <section class="toolbar" aria-label="Todo controls">
+          <div class="summary" id="summary">0 tasks left</div>
+          <div class="filters">
+            <button class="filter-btn active" data-filter="all" type="button">All</button>
+            <button class="filter-btn" data-filter="active" type="button">Active</button>
+            <button class="filter-btn" data-filter="completed" type="button">Completed</button>
+          </div>
+        </section>
+
+        <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+        <footer class="footer-row">
+          <button id="clear-completed" class="ghost-btn" type="button">Clear completed</button>
+          <p class="hint">Tasks are saved in your browser.</p>
+        </footer>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
